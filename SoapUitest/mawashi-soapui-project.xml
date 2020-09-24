@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="92412fca-5a3e-45d5-8b71-35c5bad40a44" activeEnvironment="Default" name="Mavashi" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="bb990ac4-8835-4358-8d77-cb58439fa181" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://development.mawashi.tools:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Signup" path="/api/rest/v1.0/auth/signup" id="2026e7f2-96ee-4a47-8cff-84776ae9b3ae">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Signup 1" id="83e148bc-e09b-48ec-84a6-5c02a70fec56" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:sig="http://development.mawashi.tools/api/rest/v1.0/auth/signup">sig:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:sig="http://development.mawashi.tools/api/rest/v1.0/auth/signup">sig:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="3662854b-5e7f-437f-878f-7d9603c903c0" mediaType="application/json;charset=UTF-8" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+          <con:request>{
+	"account":"kokkok",
+	"password":"123456789",
+	"username":"kokkok@gmail.com"
+	}</con:request>
+          <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/auth/signup</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="signin" path="/api/rest/v1.0/auth/signin" id="6d71b6fe-fa9b-4a6a-9bdb-04a9ae4e4c49">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>account</con:name>
+          <con:value/>
+          <con:style>PLAIN</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>username</con:name>
+          <con:value/>
+          <con:style>PLAIN</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>password</con:name>
+          <con:value/>
+          <con:style>PLAIN</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>Authorization</con:name>
+          <con:value/>
+          <con:style>HEADER</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Signin" id="11ba8798-44a5-4d91-aaf7-a829ac9eddfd" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:sig="http://development.mawashi.tools/api/rest/v1.0/auth/signin">sig:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:sig="http://development.mawashi.tools/api/rest/v1.0/auth/signin">sig:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="baf6e6f7-5b60-4c25-bd9d-bfd2de733582" mediaType="application/json;charset=UTF-8" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+          <con:request>{
+	"account":"kokkok",
+	"password":"123456789",
+	"username":"kokkok@gmail.com"
+	}</con:request>
+          <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/auth/signin</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>account</con:entry>
+            <con:entry>username</con:entry>
+            <con:entry>password</con:entry>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="v1.0" path="/api/rest/v1.0/" id="421cb769-041b-49e3-b7bd-eed02e450a37">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>Authorization</con:name>
+          <con:value/>
+          <con:style>HEADER</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>tokenType</con:name>
+          <con:value/>
+          <con:style>PLAIN</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>token</con:name>
+          <con:value/>
+          <con:style>PLAIN</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET" id="e2e5143a-72da-4b3c-b80c-59b2ee1b3348" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:v1="http://development.mawashi.tools/api/rest/v1.0/">v1:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="dee8c9d8-4787-431d-8cdb-bfaf072afb21" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="Authorization" value="Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0ODYiLCJpYXQiOjE1OTg3MDAzOTUsImV4cCI6MTU5OTMwNTE5NX0.gM9PRN7P16UIPPaP0JxQuMwYBrERc-gTj9sXB8LLpQ344US7xJctOF9b1rRFI_vky4p7K8KysUntk3nXdrHCUA" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+            <con:entry>tokenType</con:entry>
+            <con:entry>token</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="5bceb768-dc01-4b68-8fb0-e2d7d5708a49" name="TestSuite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="7050317e-bcda-4e17-a6d5-1ddacfcf481d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="properties" name="Data" id="5a696ed4-e8b2-4af3-9989-b82205ab0e57">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>account</con:name>
+              <con:value>${=java.util.UUID.randomUUID()}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>username</con:name>
+              <con:value>${=java.util.UUID.randomUUID()}@gmail.com</con:value>
+            </con:property>
+            <con:property>
+              <con:name>password</con:name>
+              <con:value>123456789</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Sinup" id="a31a9911-db35-4684-91c5-0c1f1ee82c55">
+        <con:settings/>
+        <con:config service="http://development.mawashi.tools:8080" resourcePath="/api/rest/v1.0/auth/signup" methodName="Signup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Sinup" id="3662854b-5e7f-437f-878f-7d9603c903c0" mediaType="application/json;charset=UTF-8" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+            <con:request>{
+	"account":"${Data#account}",
+	"password":"${Data#password}",
+	"username":"${Data#username}"
+	}</con:request>
+            <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/auth/signup</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a0b58c31-61b3-4922-9f88-47a4549eb433" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="dataTransfer" id="a9cda151-bcc8-41a5-b093-1d67452c6200">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>accountTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Sinup</con:sourceStep>
+            <con:sourcePath>data.account.name</con:sourcePath>
+            <con:targetType>account</con:targetType>
+            <con:targetStep>Signin</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>usernameTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Sinup</con:sourceStep>
+            <con:sourcePath>data.username</con:sourcePath>
+            <con:targetType>username</con:targetType>
+            <con:targetStep>Signin</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>passwordTranfer</con:name>
+            <con:sourceType>password</con:sourceType>
+            <con:sourceStep>Data</con:sourceStep>
+            <con:sourcePath/>
+            <con:targetType>password</con:targetType>
+            <con:targetStep>Signin</con:targetStep>
+            <con:type>XPATH</con:type>
+            <con:targetTransferType>XPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Signin" id="ae35f2fc-5f44-4e50-bc14-c225ec3fa572">
+        <con:settings/>
+        <con:config service="http://development.mawashi.tools:8080" resourcePath="/api/rest/v1.0/auth/signin" methodName="Signin" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Signin" id="baf6e6f7-5b60-4c25-bd9d-bfd2de733582" mediaType="application/json;charset=UTF-8" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+            <con:request>{
+	"account":"${#account}",
+	"password":"${#password}",
+	"username":"${#username}"
+	}</con:request>
+            <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/auth/signin</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9e4f5e31-a3c9-470b-be32-a4b92d3ac279" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>f311c3d2-a96f-4aaa-918d-535d70f6e340@gmail.com</con:username>
+              <con:password>123456789</con:password>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="Authorization" value=""/>
+              <con:entry key="password" value="123456789"/>
+              <con:entry key="account" value="36189200-0648-4e54-8af8-70ec3e6641f4"/>
+              <con:entry key="username" value="1df50fcd-8d77-44db-b63f-11803161d99f@gmail.com"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>account</con:entry>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+              <con:entry>Authorization</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="tokenTransfer" id="596a4471-dab2-4c3c-a62e-26c3fc9e7d5d">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>tokenType</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Signin</con:sourceStep>
+            <con:sourcePath>data.tokenType</con:sourcePath>
+            <con:targetType>tokenType</con:targetType>
+            <con:targetStep>GET</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>token</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Signin</con:sourceStep>
+            <con:sourcePath>data.accessToken</con:sourcePath>
+            <con:targetType>token</con:targetType>
+            <con:targetStep>GET</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="7613db49-428a-4a14-a31f-068dfdae7e65">
+        <con:settings/>
+        <con:config service="http://development.mawashi.tools:8080" resourcePath="/api/rest/v1.0/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="dee8c9d8-4787-431d-8cdb-bfaf072afb21" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://development.mawashi.tools:8080</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://development.mawashi.tools/api/rest/v1.0/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="fe583f90-4ccc-4bb4-b730-ad2fa31dc4c9" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="Authorization" value="${#tokenType} ${#token}"/>
+              <con:entry key="tokenType" value="Bearer"/>
+              <con:entry key="token" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MDMiLCJpYXQiOjE1OTg3MzM0NDYsImV4cCI6MTU5OTMzODI0Nn0.Gude7QoE811J4kadLXSBpRU9OWT6OA2OPxWdf118MAUJhlZCdApFwvpZWVRfsJxn2ExqC31qzbWu-T1Mtuberg"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Authorization</con:entry>
+              <con:entry>tokenType</con:entry>
+              <con:entry>token</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>
